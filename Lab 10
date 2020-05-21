@@ -1,0 +1,52 @@
+<html>
+	<body>
+		<form>
+			<p> 1. Начальник по-английски. <span style="color: blue;" > /.о.с/ </span></p>
+			<p> 2. Что испытывает человек при виде чего-то ужасного. <span style="color: blue;" > /.(тр){1}.х/ </span></p>
+			<p> 3. Крылатое небесное существо, упоминаемое в Библии. <span style="color: blue;" > / .(еру|при)в.м/ </span></p>
+			<p> 4. Столица России. <span style="color: blue;" > /.(ос|ур).{3}/ </span></p>
+			<p> 5. Краткий перерыв между действиями спектакля или отделениями концерта. <span style="color: blue;" > /[А-Я](нт){1}р[а-я]{3}/ </span></p>
+			<p> 6. Ловкий, искусный приём. <span style="color: blue;" > /.\Sю[а-я]/ </span></p>
+			<p> 7. Письменный договор, соглашение. <span style="color: blue;" > /.(он|она){1}т.(а|б|в)к{1}./ </span></p>
+			<p> 8. Количество экземпляров печатного издания одного названия. <span style="color: blue;" > /Т[a-к][к-я][а-я]{2}/ </span></p>
+			<p> 9. Физиологическое существование человека, животного. <span style="color: blue;" > /.([а-м]{1}[ж-я]{3}){1}/ </span></p>
+			<p> 10. Исходный пункт. <span style="color: blue;" > /^Н(а|о|б|ч){2}.[к-м]о$/ </span></p>
+			1.	<input type="text" value=""> <br><br>  	
+			2.	<input type="text" value=""> <br><br>  
+			3.	<input type="text" value=""> <br><br>  
+			4.	<input type="text" value=""> <br><br> 
+			5.	<input type="text" value=""> <br><br> 
+			6.	<input type="text" value=""> <br><br> 
+			7.	<input type="text" value=""> <br><br> 	
+			8.	<input type="text" value=""> <br><br> 
+			9.	<input type="text" value=""> <br><br> 
+			10.	<input type="text" value=""> <br><br>  
+		</form>
+		<input type="button" value="Отправить результаты" onclick=check()>
+		<script>
+			let rightanswers =
+			[
+			"Босс",
+			"Страх",
+			"Херувим",
+			"Москва",
+			"Антракт",
+			"Трюк",
+			"Контракт",
+			"Тираж",
+			"Жизнь",
+			"Начало",
+			];
+			
+			function check() {
+				for (let i = 0; i < document.forms[0].length; i++  ) {
+				if ( JSON.stringify( document.forms[0].elements[i].value ) === JSON.stringify( rightanswers[i]) )
+				{ document.forms[0].elements[i].value = 'Правильно' }
+	
+				else
+				{ document.forms[0].elements[i].value = 'Не правильно' }
+			}
+			};
+		</script>
+	</body>
+</html>
